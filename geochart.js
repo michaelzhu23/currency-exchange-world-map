@@ -37,17 +37,31 @@ function drawRegionsMap() {
   function handleSelect() {
     var selection = chart.getSelection();
     if (selection.length) {
-      if(!firstCountryClicked){
+      if (!firstCountryClicked) {
         firstCountryClicked = data.getValue(selection[0].row, 0);
         console.log(data.getValue(selection[0].row, 0));
         if (firstCountryClicked === "United States") {
+          firstCountryCurrency = "USD";
           usa.setAttribute("selected", "");
           baseCurrency.textContent = usa.textContent;
         }
       } else {
         secondCountryClicked = data.getValue(selection[0].row, 0);
         console.log(data.getValue(selection[0].row, 0));
-        if(secondCountryClicked === "China");
+        if (secondCountryClicked === "China") {
+          secondCountryCurrency = "CNY";
+          chn2.setAttribute("selected", "");
+          exchangeCurrency.textContent = chn2.textContent;
+        }
+        if (secondCountryClicked === "Canada") {
+          for(var i = 0; i < option2.length; i++){
+            option2[i].removeAttribute("selected");
+          }
+          secondCountryCurrency = "CAD"
+          can2.setAttribute("selected", "");
+          exchangeCurrency.textContent = can2.textContent;
+        }
+        getExchangeRate(firstCountryCurrency, secondCountryCurrency);
       }
     }
   }
