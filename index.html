@@ -16,63 +16,67 @@
   </header>
   <main class="container col-12">
     <div class="row">
-      <div class="col-9" id="regions_div" style="width: auto; height: 600px;"></div>
+      <div class="col-9" id="regions_div" style="width: auto; height: 830px;"></div>
       <div class="col-3">
-        <h4 class="m-0">1 <span class="badge badge-secondary">USD (US dollar)</span></h4>
+        <h4 class="m-0"><span class="badge badge-primary">1</span><span id="base-currency" class="badge badge-secondary">Base Currency</span></h4>
         <h1 class="m-0">=</h1>
-        <h4 class="mb-4">0.92 <span class="badge badge-secondary">EUR (Euro)</span></h4>
+        <h4 class="mb-4"><span id="exchange-amount" class="badge badge-primary">Amount</span><span id="exchange-currency" class="badge badge-secondary">Exchange Currency</span></h4>
         <form>
-          <div class="form-row mb-2" id="currency-1">
+          <div class="form-row mb-2">
             <div class="col">
               <input type="number" class="form-control" placeholder="Amount">
             </div>
             <div class="col">
               <select class="form-control">
                 <option selected>Select a currency</option>
-                <option value="USD">USD (US Dollar)</option>
-                <option value="JPY">JPY (Japanese Yen)</option>
-                <option value="GBP">GBP (British Pound)</option>
-                <option value="AUD">AUD (Australian Dollar)</option>
-                <option value="CAD">CAD (Canadian Dollar)</option>
-                <option value="CNY">CNY (Chinese Renminbi)</option>
-                <option value="RUB">RUB (Russian Ruble)</option>
-                <option value="INR">INR (Indian Rupe)</option>
-                <option value="BRL">BRL (Brazilian Real)</option>
-                <option value="EUR">EUR (Euro)-Spain</option>
-                <option value="EUR">EUR (Euro)-France</option>
-                <option value="EUR">EUR (Euro)-Italy</option>
-                <option value="EUR">EUR (Euro)-Germany</option>
-                <option value="EUR">EUR (Euro)-Greece</option>
-                <option value="EUR">EUR (Euro)-Finland</option>
-                <option value="EUR">EUR (Euro)-Ireland</option>
+                <option id="option1-usa" value="USD">USD (US Dollar)</option>
+                <option id="option1-jpn"  value="JPY">JPY (Japanese Yen)</option>
+                <option id="option1-gbr"  value="GBP">GBP (British Pound)</option>
+                <option id="option1-aus"  value="AUD">AUD (Australian Dollar)</option>
+                <option id="option1-can"  value="CAD">CAD (Canadian Dollar)</option>
+                <option id="option1-chn"  value="CNY">CNY (Chinese Renminbi)</option>
+                <option id="option1-rus"  value="RUB">RUB (Russian Ruble)</option>
+                <option id="option1-ind"  value="INR">INR (Indian Rupee)</option>
+                <option id="option1-bra"  value="BRL">BRL (Brazilian Real)</option>
+                <option id="option1-esp"  value="EUR">EUR (Euro)-Spain</option>
+                <option id="option1-fra"  value="EUR">EUR (Euro)-France</option>
+                <option id="option1-ita"  value="EUR">EUR (Euro)-Italy</option>
+                <option id="option1-deu"  value="EUR">EUR (Euro)-Germany</option>
+                <option id="option1-grc"  value="EUR">EUR (Euro)-Greece</option>
+                <option id="option1-fin"  value="EUR">EUR (Euro)-Finland</option>
+                <option id="option1-irl"  value="EUR">EUR (Euro)-Ireland</option>
               </select>
             </div>
           </div>
-          <div class="form-row" id="currency-2">
+          <div class="form-row mb-2">
             <div class="col">
               <input type="number" class="form-control" placeholder="Amount">
             </div>
             <div class="col">
               <select class="form-control">
                 <option selected>Select a currency</option>
-                <option>USD (US Dollar)</option>
-                <option value="USD">USD (US Dollar)</option>
-                <option value="JPY">JPY (Japanese Yen)</option>
-                <option value="GBP">GBP (British Pound)</option>
-                <option value="AUD">AUD (Australian Dollar)</option>
-                <option value="CAD">CAD (Canadian Dollar)</option>
-                <option value="CNY">CNY (Chinese Renminbi)</option>
-                <option value="RUB">RUB (Russian Ruble)</option>
-                <option value="INR">INR (Indian Rupe)</option>
-                <option value="BRL">BRL (Brazilian Real)</option>
-                <option value="EUR">EUR (Euro)-Spain</option>
-                <option value="EUR">EUR (Euro)-France</option>
-                <option value="EUR">EUR (Euro)-Italy</option>
-                <option value="EUR">EUR (Euro)-Germany</option>
-                <option value="EUR">EUR (Euro)-Greece</option>
-                <option value="EUR">EUR (Euro)-Finland</option>
-                <option value="EUR">EUR (Euro)-Ireland</option>
+                <option id="option2-usa" value="USD">USD (US Dollar)</option>
+                <option id="option2-jpn" value="JPY">JPY (Japanese Yen)</option>
+                <option id="option2-gbr" value="GBP">GBP (British Pound)</option>
+                <option id="option2-aus" value="AUD">AUD (Australian Dollar)</option>
+                <option id="option2-can" class="option2" value="CAD">CAD (Canadian Dollar)</option>
+                <option id="option2-chn" class="option2" value="CNY">CNY (Chinese Renminbi)</option>
+                <option id="option2-rus" value="RUB">RUB (Russian Ruble)</option>
+                <option id="option2-ind" value="INR">INR (Indian Rupee)</option>
+                <option id="option2-bra" value="BRL">BRL (Brazilian Real)</option>
+                <option id="option2-esp" value="EUR">EUR (Euro)-Spain</option>
+                <option id="option2-fra" value="EUR">EUR (Euro)-France</option>
+                <option id="option2-ita" value="EUR">EUR (Euro)-Italy</option>
+                <option id="option2-deu" value="EUR">EUR (Euro)-Germany</option>
+                <option id="option2-grc" value="EUR">EUR (Euro)-Greece</option>
+                <option id="option2-fin" value="EUR">EUR (Euro)-Finland</option>
+                <option id="option2-irl" value="EUR">EUR (Euro)-Ireland</option>
               </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <input type="reset" class="form-control btn btn-danger">
             </div>
           </div>
         </form>
@@ -83,6 +87,7 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript" src="geochart.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="currency-form.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
