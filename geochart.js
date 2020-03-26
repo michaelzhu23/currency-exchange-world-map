@@ -26,6 +26,7 @@ function drawRegionsMap() {
   ]);
 
   var options = {
+    colorAxis: { colors: ['#DD974B', '#DD974B'] },
     backgroundColor: '#81d4fa'
   };
 
