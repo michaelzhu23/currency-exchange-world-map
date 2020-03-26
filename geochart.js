@@ -6,23 +6,23 @@ google.charts.setOnLoadCallback(drawRegionsMap);
 
 function drawRegionsMap() {
   var data = google.visualization.arrayToDataTable([
-    ['Country', 'Popularity'],
-    ['United States', 700],
-    ['Japan', 700],
-    ['United Kingdom', 700],
-    ['Australia', 700],
-    ['Canada', 700],
-    ['China', 700],
-    ['Russia', 700],
-    ['India', 700],
-    ['Brazil', 700],
-    ['Spain', 700],
-    ['France', 700],
-    ['Italy', 700],
-    ['Germany', 700],
-    ['Greece', 700],
-    ['Finland', 700],
-    ['Ireland', 700]
+    ['Country', 'Currency'],
+    ['United States', 1],
+    ['Japan', 1],
+    ['United Kingdom', 1],
+    ['Australia', 1],
+    ['Canada', 1],
+    ['China', 1],
+    ['Russia', 1],
+    ['India', 1],
+    ['Brazil', 1],
+    ['Spain', 1],
+    ['France', 1],
+    ['Italy', 1],
+    ['Germany', 1],
+    ['Greece', 1],
+    ['Finland', 1],
+    ['Ireland', 1]
   ]);
 
   var options = {
@@ -32,4 +32,11 @@ function drawRegionsMap() {
   var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
   chart.draw(data, options);
+
+  google.visualization.events.addListener(chart, 'select', function () {
+    var selection = chart.getSelection();
+    if (selection.length) {
+      console.log(data.getValue(selection[0].row, 0));
+    }
+  });
 }
