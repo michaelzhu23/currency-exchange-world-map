@@ -1,3 +1,5 @@
+
+
 $.ajax({
   method: "GET",
   url: "https://api.exchangeratesapi.io/latest?base=USD&symbols=EUR",
