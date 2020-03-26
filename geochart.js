@@ -33,10 +33,12 @@ function drawRegionsMap() {
 
   chart.draw(data, options);
 
-  google.visualization.events.addListener(chart, 'select', function () {
+  google.visualization.events.addListener(chart, 'select', handleSelect);
+  function handleSelect() {
     var selection = chart.getSelection();
     if (selection.length) {
+      firstCountryClicked = data.getValue(selection[0].row, 0);
       console.log(data.getValue(selection[0].row, 0));
     }
-  });
+  }
 }
