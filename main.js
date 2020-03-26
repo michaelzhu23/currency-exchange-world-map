@@ -46,7 +46,8 @@ function getExchangeRate(firstCountryCurrency, secondCountryCurrency){
     url: `https://free.currconv.com/api/v7/convert?q=${firstCountryCurrency}_${secondCountryCurrency}&compact=ultra&apiKey=96ef9ace0176e6e5def3`,
     success: function (data) {
       console.log(data);
-      exchangeAmount.textContent = Object.values(data)[0];
+      exchangeRate = Object.values(data)[0];
+      exchangeAmount.textContent = exchangeRate;
     },
     error: function(error){
       console.log(error);
