@@ -1,6 +1,6 @@
 var baseInput = document.getElementById("base-input");
 var exchangeInput = document.getElementById("exchange-input");
-var exchangeRate = 0;
+var exchangeRate;
 
 function baseToExchange(){
   var computedExchangeAmount = baseInput.value * exchangeRate;
