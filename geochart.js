@@ -37,8 +37,18 @@ function drawRegionsMap() {
   function handleSelect() {
     var selection = chart.getSelection();
     if (selection.length) {
-      firstCountryClicked = data.getValue(selection[0].row, 0);
-      console.log(data.getValue(selection[0].row, 0));
+      if(!firstCountryClicked){
+        firstCountryClicked = data.getValue(selection[0].row, 0);
+        console.log(data.getValue(selection[0].row, 0));
+        if (firstCountryClicked === "United States") {
+          usa.setAttribute("selected", "");
+          baseCurrency.textContent = usa.textContent;
+        }
+      } else {
+        secondCountryClicked = data.getValue(selection[0].row, 0);
+        console.log(data.getValue(selection[0].row, 0));
+        if(secondCountryClicked === "China");
+      }
     }
   }
 }
