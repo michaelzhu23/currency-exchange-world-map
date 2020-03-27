@@ -53,14 +53,27 @@ function drawRegionsMap() {
           secondCountryCurrency = "CNY";
           chn2.setAttribute("selected", "");
           exchangeCurrency.textContent = chn2.textContent;
-        }
-        if (secondCountryClicked === "Canada") {
-          for(var i = 0; i < option2.length; i++){
+        } else if (secondCountryClicked === "Canada") {
+          for (var i = 0; i < option2.length; i++) {
             option2[i].removeAttribute("selected");
           }
           secondCountryCurrency = "CAD"
           can2.setAttribute("selected", "");
           exchangeCurrency.textContent = can2.textContent;
+        } else if (secondCountryClicked === "Australia") {
+          for (var i = 0; i < option2.length; i++) {
+            option2[i].removeAttribute("selected");
+          }
+          secondCountryCurrency = "AUD"
+          aus2.setAttribute("selected", "");
+          exchangeCurrency.textContent = aus2.textContent;
+        } else if (secondCountryClicked === "France") {
+          for (var i = 0; i < option2.length; i++) {
+            option2[i].removeAttribute("selected");
+          }
+          secondCountryCurrency = "EUR"
+          fra2.setAttribute("selected", "");
+          exchangeCurrency.textContent = fra2.textContent;
         }
         getExchangeRate(firstCountryCurrency, secondCountryCurrency);
       }
