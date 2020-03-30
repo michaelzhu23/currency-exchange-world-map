@@ -1,5 +1,6 @@
 var baseInput = document.getElementById("base-input");
 var exchangeInput = document.getElementById("exchange-input");
+var resetButton = document.getElementById("reset-button");
 var exchangeRate;
 
 function baseToExchange(){
@@ -12,5 +13,18 @@ function exchangeToBase(){
   baseInput.value = computedBaseAmount.toFixed(2);
 }
 
+function resetForm(){
+  baseCurrency.textContent = "Base Currency";
+  exchangeCurrency.textContent = "Exchange Currency";
+  exchangeAmount.textContent = "Amount";
+  for (var i = 0; i < option2.length; i++) {
+    option2[i].removeAttribute("selected");
+  }
+  for (var i = 0; i < option1.length; i++) {
+    option1[i].removeAttribute("selected");
+  }
+}
+
 baseInput.addEventListener("input", baseToExchange);
 exchangeInput.addEventListener("input", exchangeToBase)
+resetButton.addEventListener("click", resetForm);

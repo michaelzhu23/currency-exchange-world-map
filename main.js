@@ -31,6 +31,7 @@ var deu2 = document.getElementById("option2-deu");
 var grc2 = document.getElementById("option2-grc");
 var fin2 = document.getElementById("option2-fin");
 var irl2 = document.getElementById("option2-irl");
+var option1 = document.querySelectorAll(".option1");
 var option2 = document.querySelectorAll(".option2");
 var baseCurrency = document.getElementById("base-currency");
 var exchangeCurrency = document.getElementById("exchange-currency");

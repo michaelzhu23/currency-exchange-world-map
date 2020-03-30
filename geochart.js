@@ -50,6 +50,9 @@ function drawRegionsMap() {
         secondCountryClicked = data.getValue(selection[0].row, 0);
         console.log(data.getValue(selection[0].row, 0));
         if (secondCountryClicked === "China") {
+          for (var i = 0; i < option2.length; i++) {
+            option2[i].removeAttribute("selected");
+          }
           secondCountryCurrency = "CNY";
           chn2.setAttribute("selected", "");
           exchangeCurrency.textContent = chn2.textContent;
