@@ -1,19 +1,27 @@
-# C220-Hackathon-2
+# Currency Exchange World Map
+A web application that utilizes a public currency converter API to display and calculate currency exchange rates between any 2 user-selected countries on an interactive world map.
 
-For this Hackathon, you will be combining multiple public APIs of your choosing in order to create a web application that uses their combined data to create something new. The application is yours to design, but your idea must be approved by an instructor before you can move forward with building the application.
+## Live Demo
+Coming soon!
 
-### Requirements
-- Combine **at least** 2 public APIs via AJAX requests and present their combined information in a web application of your design.
-- Must be issue-managed via [Meistertask](https://www.meistertask.com/) or an equivalent Kanban board.
-- Application idea **MUST** be approved by an instructor before you begin coding your project.
+## Technologies Used
+- JavaScript
+- jQuery
+- Bootstrap 4
+- HTML5
+- CSS3
+- Google GeoChart - https://developers.google.com/chart/interactive/docs/gallery/geochart
+- Currency Converter API - https://www.currencyconverterapi.com/
 
+## Features
+- User can view world map
+- User can view currency converter form
+- User can select countries on world map
+- User can view different currency exchange rates of countries selected
+- User can input an amount for one currency and see the equivalent amount of the comparison currency
 
-### Approved API List
+## Preview
 
-Found [**here**](https://docs.google.com/document/d/10CMIYVWv36gophaq_3DldBoAT4w6g4xL9xEMnEu-z5o/edit?usp=sharing)
+![](CEWP-Screenshot.png)
 
-### ProgrammableWeb API Directory
-
-Found [**here**](https://www.programmableweb.com/apis/directory)
-
-**NOTE:** Any APIs found through this link not on the approved API list above must be approved by an instructor to be used. In order to be approved, you must be able to provide proof of a successful AJAX call in the browser **WITHOUT** using VSCode's Live Server.
+## Development
