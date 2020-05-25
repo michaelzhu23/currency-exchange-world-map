@@ -38,15 +38,6 @@ function drawRegionsMap() {
   function handleSelect() {
     var selection = chart.getSelection();
     if (selection.length) {
-      if (!firstCountryClicked) {
-        firstCountryClicked = data.getValue(selection[0].row, 0);
-        console.log(data.getValue(selection[0].row, 0));
-        if (firstCountryClicked === "United States") {
-          firstCountryCurrency = "USD";
-          usa.setAttribute("selected", "");
-          baseCurrency.textContent = usa.textContent;
-        }
-      } else {
         exchangeCountrySelected = data.getValue(selection[0].row, 0);
         console.log(data.getValue(selection[0].row, 0));
         if (exchangeCountrySelected === "China") {
@@ -82,4 +73,3 @@ function drawRegionsMap() {
       }
     }
   }
-}
