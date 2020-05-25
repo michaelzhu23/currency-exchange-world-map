@@ -1,4 +1,3 @@
-var usa2 = document.getElementById("option2-usa");
 var jpn2 = document.getElementById("option2-jpn");
 var gbr2 = document.getElementById("option2-gbr");
 var aus2 = document.getElementById("option2-aus");
@@ -17,13 +16,13 @@ var irl2 = document.getElementById("option2-irl");
 var option2 = document.querySelectorAll(".option2");
 var exchangeCurrency = document.getElementById("exchange-currency");
 var exchangeAmount = document.getElementById("exchange-amount");
-var secondCountryClicked;
-var secondCountryCurrency;
+var exchangeCountrySelected;
+var exchangeCurrencyCode;
 
-function getExchangeRate(firstCountryCurrency, secondCountryCurrency){
+function getExchangeRate(exchangeCurrencyCode){
   $.ajax({
     method: "GET",
-    url: `https://free.currconv.com/api/v7/convert?q=USD_${secondCountryCurrency}&compact=ultra&apiKey=96ef9ace0176e6e5def3`,
+    url: `https://free.currconv.com/api/v7/convert?q=USD_${exchangeCurrencyCode}&compact=ultra&apiKey=96ef9ace0176e6e5def3`,
     success: function (data) {
       console.log(data);
       exchangeRate = Object.values(data)[0];

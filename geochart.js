@@ -47,38 +47,38 @@ function drawRegionsMap() {
           baseCurrency.textContent = usa.textContent;
         }
       } else {
-        secondCountryClicked = data.getValue(selection[0].row, 0);
+        exchangeCountrySelected = data.getValue(selection[0].row, 0);
         console.log(data.getValue(selection[0].row, 0));
-        if (secondCountryClicked === "China") {
+        if (exchangeCountrySelected === "China") {
           for (var i = 0; i < option2.length; i++) {
             option2[i].removeAttribute("selected");
           }
-          secondCountryCurrency = "CNY";
+          exchangeCurrencyCode = "CNY";
           chn2.setAttribute("selected", "");
           exchangeCurrency.textContent = chn2.textContent;
-        } else if (secondCountryClicked === "Canada") {
+        } else if (exchangeCountrySelected === "Canada") {
           for (var i = 0; i < option2.length; i++) {
             option2[i].removeAttribute("selected");
           }
-          secondCountryCurrency = "CAD"
+          exchangeCurrencyCode = "CAD"
           can2.setAttribute("selected", "");
           exchangeCurrency.textContent = can2.textContent;
-        } else if (secondCountryClicked === "Australia") {
+        } else if (exchangeCountrySelected === "Australia") {
           for (var i = 0; i < option2.length; i++) {
             option2[i].removeAttribute("selected");
           }
-          secondCountryCurrency = "AUD"
+          exchangeCurrencyCode = "AUD"
           aus2.setAttribute("selected", "");
           exchangeCurrency.textContent = aus2.textContent;
-        } else if (secondCountryClicked === "France") {
+        } else if (exchangeCountrySelected === "France") {
           for (var i = 0; i < option2.length; i++) {
             option2[i].removeAttribute("selected");
           }
-          secondCountryCurrency = "EUR"
+          exchangeCurrencyCode = "EUR"
           fra2.setAttribute("selected", "");
           exchangeCurrency.textContent = fra2.textContent;
         }
-        getExchangeRate(firstCountryCurrency, secondCountryCurrency);
+        getExchangeRate(exchangeCurrencyCode);
       }
     }
   }
