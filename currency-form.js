@@ -14,14 +14,10 @@ function exchangeToBase(){
 }
 
 function resetForm(){
-  baseCurrency.textContent = "Base Currency";
   exchangeCurrency.textContent = "Exchange Currency";
   exchangeAmount.textContent = "Amount";
   for (var i = 0; i < option2.length; i++) {
     option2[i].removeAttribute("selected");
-  }
-  for (var i = 0; i < option1.length; i++) {
-    option1[i].removeAttribute("selected");
   }
 }
 
