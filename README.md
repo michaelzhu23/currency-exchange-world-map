@@ -11,7 +11,7 @@ Coming soon!
 - HTML5
 - CSS3
 - Google GeoChart - https://developers.google.com/chart/interactive/docs/gallery/geochart
-- Currency Converter API - https://www.currencyconverterapi.com/
+- Currency Converter API - https://openexchangerates.org/
 
 ## Features
 - User can view world map
