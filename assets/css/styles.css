@@ -7,3 +7,11 @@
   height: 830px;
   width: auto;
 }
+
+.visualization path:hover {
+  cursor: pointer;
+}
+
+.visualization path:active {
+  fill: cornflowerblue;
+}
