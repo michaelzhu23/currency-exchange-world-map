@@ -1,7 +1,7 @@
 var baseInput = document.getElementById("base-input");
 var exchangeInput = document.getElementById("exchange-input");
 var resetButton = document.getElementById("reset-button");
-var exchangeRate;
+var exchangeRate = null;
 
 function baseToExchange(){
   var computedExchangeAmount = baseInput.value * exchangeRate;
@@ -16,6 +16,7 @@ function exchangeToBase(){
 function resetForm(){
   exchangeCurrency.textContent = "Exchange Currency";
   exchangeAmount.textContent = "Amount";
+  exchangeRate = null;
   for (var i = 0; i < option2.length; i++) {
     option2[i].removeAttribute("selected");
   }

@@ -26,7 +26,7 @@ function getExchangeRate(exchangeCurrencyCode){
     success: function (data) {
       console.log(data);
       exchangeRate = data.rates[exchangeCurrencyCode];
-      exchangeAmount.textContent = exchangeRate;
+      exchangeAmount.textContent = exchangeRate.toFixed(4);
     },
     error: function(error){
       console.log(error);
