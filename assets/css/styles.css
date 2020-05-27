@@ -2,3 +2,8 @@
   font-family: currency;
   color: gray;
 }
+
+.map {
+  height: 830px;
+  width: auto;
+}
