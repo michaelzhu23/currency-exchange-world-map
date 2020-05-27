@@ -1,7 +1,6 @@
-var exchangeCurrency = document.getElementById("exchange-currency");
-var exchangeAmount = document.getElementById("exchange-amount");
 var exchangeCountrySelected;
 var exchangeCurrencyCode;
+var exchangeRate = null;
 
 function getExchangeRate(exchangeCurrencyCode){
   $.ajax({
