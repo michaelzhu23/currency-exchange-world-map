@@ -22,10 +22,10 @@ var exchangeCurrencyCode;
 function getExchangeRate(exchangeCurrencyCode){
   $.ajax({
     method: "GET",
-    url: `https://free.currconv.com/api/v7/convert?q=USD_${exchangeCurrencyCode}&compact=ultra&apiKey=96ef9ace0176e6e5def3`,
+    url: `https://openexchangerates.org/api/latest.json?app_id=d18484cad8964d32b4f71a7d9bd4005f&symbols=${exchangeCurrencyCode}`,
     success: function (data) {
       console.log(data);
-      exchangeRate = Object.values(data)[0];
+      exchangeRate = data.rates[exchangeCurrencyCode];
       exchangeAmount.textContent = exchangeRate;
     },
     error: function(error){
