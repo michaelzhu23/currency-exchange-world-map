@@ -22,6 +22,6 @@ Coming soon!
 
 ## Preview
 
-![](CEWP-Screenshot.png)
+![](assets/images/CEWP-Screenshot.png)
 
 ## Development
