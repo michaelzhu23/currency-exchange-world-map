@@ -2,6 +2,12 @@ var exchangeCountrySelected;
 var exchangeCurrencyCode;
 var exchangeRate = null;
 
+function hideModal() {
+  document.querySelector(".modal-overlay").classList.add("hidden");
+}
+
+document.getElementById("continue-button").addEventListener("click", hideModal);
+
 function getExchangeRate(exchangeCurrencyCode){
   $.ajax({
     method: "GET",

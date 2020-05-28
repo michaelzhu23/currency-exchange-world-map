@@ -20,6 +20,35 @@
   fill: cornflowerblue;
 }
 
+.modal-overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  max-width: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Raleway-medium;
+}
+
+.green-text {
+  color: #81c14b;
+}
+
+.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 1024px){
   .map{
     height: 650px;
