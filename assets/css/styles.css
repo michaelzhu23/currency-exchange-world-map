@@ -41,6 +41,10 @@
   font-family: Raleway-medium;
 }
 
+.green-text {
+  color: #81c14b;
+}
+
 @media only screen and (max-width: 1024px){
   .map{
     height: 650px;
