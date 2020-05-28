@@ -30,4 +30,4 @@ Try the application live at http://currency-exchange-world-map.themichaelzhu.com
     git clone https://github.com/michaelzhu23/currency-exchange-world-map.git
     cd currency-exchange-world-map
     ```
-2. Open directory with a code editor and open default browser from index.html file.
+2. Open the directory with a code editor and open in default browser from index.html file to preview the app.
