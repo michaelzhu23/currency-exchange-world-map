@@ -45,6 +45,10 @@
   color: #81c14b;
 }
 
+.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 1024px){
   .map{
     height: 650px;
