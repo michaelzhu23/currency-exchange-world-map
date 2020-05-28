@@ -35,6 +35,10 @@ function drawRegionsMap() {
 
   chart.draw(data, options);
 
+  $(window).resize(function () {
+    chart.draw(data, options);
+  })
+
   google.visualization.events.addListener(chart, 'select', handleSelect);
   function handleSelect() {
     var selection = chart.getSelection();

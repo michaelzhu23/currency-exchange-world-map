@@ -19,3 +19,27 @@
 .visualization path:active {
   fill: cornflowerblue;
 }
+
+@media only screen and (max-width: 1024px){
+  .map{
+    height: 650px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .map{
+    height: 550px;
+  }
+}
+
+@media only screen and (max-width: 667px){
+  .map{
+    height: 450px;
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .map{
+    height: 250px;
+  }
+}
