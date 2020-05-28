@@ -3,6 +3,10 @@
   color: gray;
 }
 
+.heading {
+  font-size: 1.7rem;
+}
+
 .map {
   height: 830px;
   width: auto;
