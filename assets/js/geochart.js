@@ -44,6 +44,8 @@ function drawRegionsMap() {
     var selection = chart.getSelection();
     if (selection.length) {
       exchangeCountrySelected = data.getValue(selection[0].row, 0);
+      baseInput.value = "";
+      exchangeInput.value = "";
       var option2 = document.querySelectorAll(".option2");
       switch (exchangeCountrySelected) {
         case "Australia":
