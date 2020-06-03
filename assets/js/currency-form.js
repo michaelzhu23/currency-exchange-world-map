@@ -20,6 +20,8 @@ function handleOptionSelect(event){
   getExchangeRate(exchangeCurrencyCode);
   var selectedOption = document.querySelector(`[value=${event.target.value}]`)
   exchangeCurrency.textContent = selectedOption.textContent;
+  baseInput.value = "";
+  exchangeInput.value = "";
 }
 
 function resetForm(){
