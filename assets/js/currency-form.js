@@ -1,7 +1,5 @@
 var exchangeCurrency = document.getElementById("exchange-currency");
 var exchangeAmount = document.getElementById("exchange-amount");
-var baseInput = document.getElementById("base-input");
-var exchangeInput = document.getElementById("exchange-input");
 var resetButton = document.getElementById("reset-button");
 var exchangeSelectForm = document.getElementById("exchange-select-form");
 
