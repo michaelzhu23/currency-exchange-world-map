@@ -1,6 +1,8 @@
 var exchangeCountrySelected;
 var exchangeCurrencyCode;
 var exchangeRate = null;
+var baseInput = document.getElementById("base-input");
+var exchangeInput = document.getElementById("exchange-input");
 
 function hideModal() {
   document.querySelector(".modal-overlay").classList.add("hidden");
