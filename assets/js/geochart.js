@@ -8,26 +8,26 @@ function drawRegionsMap() {
   var data = google.visualization.arrayToDataTable([
     ['Country', 'Currency'],
     ['United States', 1],
-    ['Japan', 1],
-    ['United Kingdom', 1],
-    ['Australia', 1],
-    ['Canada', 1],
-    ['China', 1],
-    ['Russia', 1],
-    ['India', 1],
-    ['Brazil', 1],
-    ['Spain', 1],
-    ['France', 1],
-    ['Italy', 1],
-    ['Germany', 1],
-    ['Greece', 1],
-    ['Sweden', 1],
-    ['Philippines', 1],
-    ['Mexico', 1]
+    ['Japan', 2],
+    ['United Kingdom', 2],
+    ['Australia', 2],
+    ['Canada', 2],
+    ['China', 2],
+    ['Russia', 2],
+    ['India', 2],
+    ['Brazil', 2],
+    ['Spain', 2],
+    ['France', 2],
+    ['Italy', 2],
+    ['Germany', 2],
+    ['Greece', 2],
+    ['Sweden', 2],
+    ['Philippines', 2],
+    ['Mexico', 2]
   ]);
 
   var options = {
-    colorAxis: { colors: ['#81c14b', '#81c14b'] },
+    colorAxis: { colors: ['eeef20', '#81c14b'] },
     backgroundColor: '#81d4fa'
   };
 
