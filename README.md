@@ -21,7 +21,7 @@ Try the application live at http://currency-exchange-world-map.themichaelzhu.com
 - User can input an amount for one currency and see the equivalent amount of the comparison currency
 
 ## Preview
-![](assets/images/demo.gif)
+![](assets/images/demo2.gif)
 
 ## Development
 ### Getting Started
