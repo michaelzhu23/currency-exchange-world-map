@@ -193,7 +193,9 @@ function drawRegionsMap() {
           exchangeCurrency.textContent = gbr2.textContent;
           break;
         }
+      if (exchangeCountrySelected !== "United States"){
         getExchangeRate(exchangeCurrencyCode);
+      }
       }
     }
   }
