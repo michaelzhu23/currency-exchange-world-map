@@ -1,6 +1,7 @@
 var exchangeCountrySelected;
 var exchangeCurrencyCode;
 var exchangeRate = null;
+var exchangeAmount = document.getElementById("exchange-amount");
 var baseInput = document.getElementById("base-input");
 var exchangeInput = document.getElementById("exchange-input");
 
@@ -11,15 +12,23 @@ function hideModal() {
 document.getElementById("continue-button").addEventListener("click", hideModal);
 
 function getExchangeRate(exchangeCurrencyCode){
+  baseInput.setAttribute("disabled", "");
+  exchangeInput.setAttribute("disabled", "");
   $.ajax({
     method: "GET",
     url: `https://openexchangerates.org/api/latest.json?app_id=d18484cad8964d32b4f71a7d9bd4005f&symbols=${exchangeCurrencyCode}`,
     success: function (data) {
+      exchangeAmount.classList.remove("badge-danger");
+      exchangeAmount.classList.add("badge-primary");
+      baseInput.removeAttribute("disabled");
+      exchangeInput.removeAttribute("disabled");
       exchangeRate = data.rates[exchangeCurrencyCode];
       exchangeAmount.textContent = exchangeRate.toFixed(4);
     },
     error: function(error){
-      console.log(error);
+      exchangeAmount.classList.remove("badge-primary");
+      exchangeAmount.classList.add("badge-danger");
+      exchangeAmount.textContent = "Internet connection lost. Please try again.";
     }
   })
 }
